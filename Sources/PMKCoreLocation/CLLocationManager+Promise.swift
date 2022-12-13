@@ -223,7 +223,7 @@ private class AuthorizationCatcher: CLLocationManager, CLLocationManagerDelegate
 
             switch type {
             case .always:
-            #if os(tvOS)
+            #if os(tvOS) || APPCLIP
                 fallthrough
             #else
                 requestAlwaysAuthorization()
