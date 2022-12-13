@@ -223,11 +223,8 @@ private class AuthorizationCatcher: CLLocationManager, CLLocationManagerDelegate
 
             switch type {
             case .always:
-            #if os(tvOS) || APPCLIP
+                // TODO - Removed code to see if this is why the AppClip fails
                 fallthrough
-            #else
-                requestAlwaysAuthorization()
-            #endif
             case .whenInUse:
                 requestWhenInUseAuthorization()
             }
